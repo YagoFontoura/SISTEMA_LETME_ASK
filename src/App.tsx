@@ -1,6 +1,18 @@
+import { Home } from "./pages/Home";
+import { NewRoom } from "./pages/NewRoom";
+import { Route, BrowserRouter } from "react-router-dom";
+import {AuthContextProvider} from '../src/context/AuthContext'
+
 function App() {
+  
+
   return (
-    <h1>Hello World</h1>
+    <BrowserRouter>
+     <AuthContextProvider>
+        <Route path="/" exact component={Home} />
+        <Route path="/rooms/new" component={NewRoom} />
+      </AuthContextProvider>
+    </BrowserRouter>
   );
 }
 
