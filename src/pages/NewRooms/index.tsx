@@ -1,11 +1,11 @@
-import illustrationImg from "../assets/images/illustration.svg";
-import letmeLogo from "../assets/images/logo.svg";
-import '../styles/auth.scss'
-import { Button } from '../components/Button'
+import { Button } from '../../components/Button'
 import { Link, useHistory } from "react-router-dom";
 import { FormEvent, useState } from "react";
-import { database } from "../services/firebaseConnect";
-import { useAuth } from "../hooks/useAuth";
+import { database } from "../../services/firebaseConnect";
+import { useAuth } from "../../hooks/useAuth";
+import letmeLogo from "../../assets/images/logo.svg";
+import illustrationImg from "../../assets/images/illustration.svg";
+import '../NewRooms/style.scss'
 
 
 
@@ -38,13 +38,14 @@ export function NewRoom() {
 
       <main>
         <div className="main-content">
-          <img src={letmeLogo} alt="Logo da LetmeAsk" />
+        <Link to="/"><img src={letmeLogo} alt="Logo da LetmeAsk" /></Link>
     
           <h2>Criar uma nova sala.</h2>
           
           <form onSubmit={handleCreateRoom}>
             <input 
             type="text" 
+            required
             placeholder="Nome da sala"
             onChange={event => setNewRoom(event.target.value)}
             value={newRoom}

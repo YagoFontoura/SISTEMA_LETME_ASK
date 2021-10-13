@@ -1,15 +1,17 @@
-import { Button } from "../components/Button";
-import { RoomCode } from "../components/RoomCode";
+import { Button } from "../../components/Button";
+import { RoomCode } from "../../components/RoomCode";
 import { useParams } from "react-router";
 import { FormEvent, useState } from "react";
-import { useAuth } from "../hooks/useAuth";
-import { database } from "../services/firebaseConnect";
-import { Question } from "../components/Question/index";
+import { useAuth } from "../../hooks/useAuth";
+import { database } from "../../services/firebaseConnect";
+import { Question } from "../../components/Question/index";
 
-import logoImg from "../assets/images/logo.svg";
-import "../styles/room.scss";
-import "../components/Question/style.scss";
-import { useRoom } from "./useRoom";
+
+import logoImg from "../../assets/images/logo.svg";
+import "../Room/style.scss";
+import "../../components/Question/style.scss";
+import { useRoom } from "../../components/useRoom/useRoom";
+import { Link } from "react-router-dom";
 
 type RoomParams = {
   id: string;
@@ -64,7 +66,7 @@ export function Room() {
     <div id="page-room">
       <header>
         <div className="content">
-          <img src={logoImg} alt="Logo" />
+        <Link to="/"><img src={logoImg} alt="Logo" /></Link>
           <RoomCode code={roomId} />
         </div>
       </header>
@@ -79,6 +81,7 @@ export function Room() {
           <textarea
             placeholder="O que você quer perguntar ?"
             onChange={(event) => setNewQuestion(event.target.value)}
+            required
             value={newQuestion}
           />
 

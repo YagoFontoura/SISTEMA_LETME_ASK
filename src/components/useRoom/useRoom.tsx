@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { useAuth } from "../hooks/useAuth";
-import { database } from '../services/firebaseConnect'
+import { useAuth } from "../../hooks/useAuth";
+import { database } from '../../services/firebaseConnect'
 
 type FirebaseQuestions = Record<string, {
 

@@ -1,18 +1,18 @@
-import { Button } from "../components/Button";
-import { RoomCode } from "../components/RoomCode";
+import { Button } from "../../components/Button";
+import { RoomCode } from "../../components/RoomCode";
 import { useHistory, useParams } from "react-router";
 
-import { Question } from "../components/Question/index";
+import { Question } from "../../components/Question/index";
 
-import logoImg from "../assets/images/logo.svg";
-import "../styles/room.scss";
-import "../components/Question/style.scss";
-import deleteImg from "../assets/images/delete.svg"
-import chackImg from '../assets/images/check.svg'
-import answerImg from '../assets/images/answer.svg'
+import logoImg from "../../assets/images/logo.svg";
+import "../AdminRoom/style.scss";
+import "../../components/Question/style.scss";
+import deleteImg from "../../assets/images/delete.svg"
+import chackImg from '../../assets/images/check.svg'
+import answerImg from '../../assets/images/answer.svg'
 
-import { useRoom } from "./useRoom";
-import { database } from "../services/firebaseConnect";
+import { useRoom } from "../../components/useRoom/useRoom";
+import { database } from "../../services/firebaseConnect";
 
 type RoomParams = {
   id: string;

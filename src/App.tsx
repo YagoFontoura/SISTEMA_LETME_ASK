@@ -1,7 +1,7 @@
 import { Home } from "./pages/Home";
-import { NewRoom } from "./pages/NewRoom";
+import { NewRoom } from "./pages/NewRooms";
 import { Room } from "./pages/Room";
-import { AdminRoom } from "./pages/AdminRoom";
+import { AdminRoom } from "./pages/AdminRoom/AdminRoom";
 
 import { Route, BrowserRouter ,Switch} from "react-router-dom";
 import {AuthContextProvider} from '../src/context/AuthContext'
