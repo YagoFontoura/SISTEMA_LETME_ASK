@@ -13,6 +13,7 @@ import answerImg from '../../assets/images/answer.svg'
 
 import { useRoom } from "../../components/useRoom/useRoom";
 import { database } from "../../services/firebaseConnect";
+import { Link } from "react-router-dom";
 
 type RoomParams = {
   id: string;
@@ -57,7 +58,7 @@ export function AdminRoom() {
     <div id="page-room">
       <header>
         <div className="content">
-          <img src={logoImg} alt="Logo" />
+        <Link to="/"><img src={logoImg} alt="Logo" /></Link>
           <div>
             <RoomCode code={roomId} />
             <Button isOutlined onClick={handleEndRoom}>Encerrar Sala</Button>
