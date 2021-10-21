@@ -1,12 +1,14 @@
 import { Button } from "../../components/Button";
 import { RoomCode } from "../../components/RoomCode";
-import { useHistory, useParams } from "react-router";
+import { useHistory, useParams } from "react-router";   
+
 
 import { Question } from "../../components/Question/index";
 
-import logoImg from "../../assets/images/logo.svg";
+
 import "../AdminRoom/style.scss";
 import "../../components/Question/style.scss";
+import logoImg from "../../assets/images/logo.svg";
 import deleteImg from "../../assets/images/delete.svg"
 import chackImg from '../../assets/images/check.svg'
 import answerImg from '../../assets/images/answer.svg'
@@ -14,6 +16,7 @@ import answerImg from '../../assets/images/answer.svg'
 import { useRoom } from "../../components/useRoom/useRoom";
 import { database } from "../../services/firebaseConnect";
 import { Link } from "react-router-dom";
+
 
 type RoomParams = {
   id: string;
@@ -54,14 +57,17 @@ export function AdminRoom() {
     }
   }
 
+    
+
   return (
+    
     <div id="page-room">
       <header>
         <div className="content">
         <Link to="/"><img src={logoImg} alt="Logo" /></Link>
           <div>
             <RoomCode code={roomId} />
-            <Button isOutlined onClick={handleEndRoom}>Encerrar Sala</Button>
+            <Button isOutlined onClick={() => {handleEndRoom()}}>Encerrar Sala</Button>
           </div>
         </div>
       </header>
@@ -103,6 +109,11 @@ export function AdminRoom() {
           })}
         </div>
       </main>
+    
     </div>
+    
+
+
+    
   );
 }
