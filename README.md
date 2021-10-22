@@ -1,5 +1,5 @@
 <h1 align="center">LETME-ASK</h1>
-![Image](public/git/letme-ask.png)
+<img src="/src/assets/preview.png">
 
 ## 🎓 Tecnologias
 
